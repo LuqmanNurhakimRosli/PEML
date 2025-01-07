@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Team</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        /* Leader Row and Card Styling */
+        .leader-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .leader-card {
+            border: 2px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .leader-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Name Link Styling */
+        .card-header h4 {
+            cursor: pointer;
+            color: #007bff;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin: 0;
+        }
+
+        .card-header h4:hover {
+            color: #0056b3;
+        }
+
+        /* Leader Badge Styling */
+        .leader-badge {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #FFD700;
+            margin-left: 10px;
+        }
+
+        /* Dropdown Styling */
+        .card-dropdown {
+            display: none; /* Hidden by default */
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .card-dropdown h5 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-dropdown p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<section id="leadership" class="section">
+    <div class="container">
+        <h2>PEML LEADERSHIP TEAM</h2>
+        <br>
+        <div class="leader-row">
+            <!-- Leader 1 -->
+            <div class="leader-card">
+                <div class="leader-img">
+                    <img src="images/leaderMarketing/Picture1.jpg" alt="Leader 1" class="img-fluid">
+                </div>
+                <div class="card-header">
+                    <h4 class="toggle-dropdown" data-dropdown="dropdown1">
+                        Tan Sri Dato' Sri Haji Syed Zainal Abidin Syed Mohamed Tahir Jamalullail
+                        <span class="leader-badge"><i class="fa fa-star" aria-hidden="true"></i> Leader</span>
+                    </h4>
+                </div>
+                <div id="dropdown1" class="card-dropdown">
+                    <h5>Chairman</h5>
+                    <p>More than 25 years of leadership experience in energy and automotive industry</p>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="leader-card">
+                <div class="leader-img">
+                    <img src="images/leaderMarketing/Picture2.jpg" alt="Leader 2" class="img-fluid">
+                </div>
+                <div class="card-header">
+                    <h4 class="toggle-dropdown" data-dropdown="dropdown2">Muhammad Saifullah Mohd Isa</h4>
+                </div>
+                <div id="dropdown2" class="card-dropdown">
+                    <h5>Chief Executive Officer aq </h5>
+                    <p>Over 20 years of experience in financial and business management</p>
+                </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="leader-card">
+                <div class="leader-img">
+                    <img src="images/leaderMarketing/Picture3.jpg" alt="Leader 3" class="img-fluid">
+                </div>
+                <div class="card-header">
+                    <h4 class="toggle-dropdown" data-dropdown="dropdown3">Mohamad Anuar Ebrahim</h4>
+                </div>
+                <div id="dropdown3" class="card-dropdown">
+                    <h5>Chief Technology Officer</h5>
+                    <p>Expert in technology and innovation with 15 years in the tech industry</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.toggle-dropdown').forEach(header => {
+        header.addEventListener('click', function() {
+            // Get the ID of the specific dropdown from data attribute
+            const dropdownId = this.getAttribute('data-dropdown');
+            const dropdown = document.getElementById(dropdownId);
+
+            // Hide any visible dropdowns except the current one
+            document.querySelectorAll('.card-dropdown').forEach(d => {
+                if (d.id !== dropdownId) {
+                    d.style.display = 'none';
+                }
+            });
+
+            // Toggle the display of the clicked card's dropdown
+            dropdown.style.display = dropdown.style.display === 'none' || dropdown.style.display === '' ? 'block' : 'none';
+        });
+    });
+</script>
+
+</body>
+</html>

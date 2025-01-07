@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+.prevent-select {
+  -webkit-touch-callout: none; /* iOS */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
+ /* Internet Explorer/Edge */
+  user-select: none;
+ /* Generic */
+}
+
+html {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font throughout */
+}
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+
+  }
+
+  .h1-text h1{
+    font-size: 1.75rem;
+    margin-top: 20px;
+    color: #53b848;
+    font-weight: bold;
+  }
+
+  #aboutUs .p-text p{
+    font-size: 9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+
+
+span {
+  font-weight: bolder;
+  
+}
+
+  .color-text {
+  color: #53b848;
+  }
+
+  #header {
+    display: flex; /* Make the header a flex container */
+    flex-direction: column; /* Arrange items vertically */
+    padding: 30px 40px 30px 50px;
+    margin: 0; /* Reset margins to avoid shifting */
+    width: 100%; /* Ensure the header spans the full width of the screen */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+#header-container {
+    margin: 0; /* Reset margin */
+    flex: 1; /* Allow the container to take up available space */
+    width: 100%; /* Make sure it spans the full width */
+}
+
+#header h1 {
+    margin: 0; /* Remove excess margins */
+    padding-top: 20px; /* Use padding to create space instead of margin */
+    color: black;
+    text-align: left; /* Align text to the left */
+}
+
+  /* *************************************************** */
+/* Ensure the navbar spans the full width of the screen */
+.container-fluid {
+  padding: 0; /* Remove default padding */
+  margin: 0;  /* Remove any margin */
+}
+
+/* Adjust the spacing between navbar rows */
+.navbar {
+  position: relative;
+  z-index: 1010;
+  font-size: 16px;
+  background-color: #ffffff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #bec4c9;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.no-sticky {
+  position: static;
+  box-shadow: none;
+}
+
+.navbar .container {
+  max-width: 1200px; /* Restrict the max width for large screens */
+  width: 100%; /* Ensure full width within the max-width */
+  padding: 8px 1.25rem; /* Padding for top, bottom, left, and right */
+  padding-left: 3rem;
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Styling for navbar-toggler button */
+.navbar-toggler {
+  border-color: #53b848; /* Color for the toggler border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2859,184,72,1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Custom icon for toggler */
+}
+
+.navbar-brand {
+  padding: 0.08rem; /* Adjust padding to control size */
+}
+
+.navbar-brand img {
+  max-width: 120px; /* Controls logo size */
+  height: auto; /* Maintain aspect ratio */
+  /* border-right: 1px solid #bec4c9; */
+  margin-right: 2.5rem;
+}
+
+#navbarNavRow1 {
+  justify-content: end;
+  margin-left: 0; /* Remove excessive right margin */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #181616; /* Color of navbar links */
+  font-weight: bolder; /* Bold text */
+  padding: 10px 15px; /* Padding for links */
+  text-decoration: none; /* Remove underline */
+  
+}
+.navbar-nav .nav-link {
+  margin-right: 15px; /* Adjust value as needed for spacing */
+}
+
+
+#link-main .nav-link {
+  color: #53b848;
+}
+.dropdown {
+  position: relative; /* Ensure dropdown-menu is positioned relative to this */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute; /* Ensure dropdown is out of the normal flow */
+  z-index: 1100; /* High z-index to make it appear on top */
+  background-color: white; /* Optional: Ensure dropdown is visible */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.dropdown-item {
+  color: #1a1a1a; /* Text color for dropdown items */
+  padding: 10px 20px; /* Padding for dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #53b848; /* Highlight color on hover */
+  color: white; /* Text color on hover */
+
+}
+
+/* Dropdown Toggle Arrow */
+.navbar-nav .dropdown-toggle {
+  position: relative; /* Positioning for the arrow */
+  display: inline-flex; /* Use flex for alignment */
+  align-items: center; /* Center items vertically */
+  
+}
+
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.5rem; /* Space between link text and arrow */
+  content: "";
+  width: 0; 
+  height: 0; 
+  border-left: 0.4em solid transparent; /* Arrow triangle */
+  border-right: 0.4em solid transparent; /* Arrow triangle */
+  border-top: 0.4em solid #53b848; /* Arrow color and shape */
+  margin-top: -0.1em; /* Adjust vertical alignment */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .navbar {
+      padding: 8px 20px; /* Reduced padding on smaller screens */
+  }
+  .navbar-brand img {
+      max-width: 80px; /* Smaller logo on mobile */
+  }
+  .navbar-nav .nav-link {
+      padding: 8px 12px; /* Adjust link padding on mobile */
+  }
+}
+
+/* Mini navbar under the main navbar */
+.under-nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;}
+
+  .under-nav .container {
+    max-width: 1200px; /* Match the navbar's max-width */
+    width: 100%; /* Ensure it spans the available width */
+    padding: 8px 1.25rem; /* Match the navbar padding */
+    padding-left: 3rem; /* Align with the navbar's left padding */
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+
+.under-nav .nav-link {
+  font-size: 14px;
+  color: #000000;
+  font-weight: normal;
+  padding: 10px 15px;
+  margin-left: 0;
+}
+
+.under-nav .nav-link#border-green {
+  border-bottom: 2px solid #53b848;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Footer Styles */
+/* Footer General Styles */
+footer {
+  margin: 0; /* Ensure no unexpected margin */
+  padding: 20px 0;
+  border-top: 2px solid #53b848;
+  position: relative;
+  width: 100vw; /* Use viewport width explicitly */
+  box-sizing: border-box;
+}
+
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Distribute sections evenly with spaces */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+  max-width: 1200px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Inner padding for spacing */
+  box-sizing: border-box; /* Avoid issues with padding and width */
+}
+
+/* Individual Footer Section */
+.footer-section {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+  margin: 10px; /* Spacing between sections */
+  text-align: center; /* Center-align content */
+}
+
+.footer-section img {
+  max-width: 150px; /* Set max width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 10px; /* Center the image and add bottom spacing */
+  display: block; /* Ensure the image is a block element */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px; /* Add spacing below the heading */
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-section ul li {
+  margin-bottom: 5px; /* Spacing between list items */
+  font-size: 14px; /* Adjust font size */
+  word-wrap: break-word; /* Handle long words to prevent overflow */
+}
+
+.footer-section a {
+  color: black; /* Set link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-section a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Footer Copyright Section */
+.footer-copyright {
+  text-align: center; /* Center-align the copyright text */
+  font-size: 12px; /* Adjust font size */
+  margin-top: 20px; /* Add spacing above the copyright text */
+}
+
+/* Gradient Divider (Optional) */
+.color-gradient {
+  background-image: linear-gradient(to right, #0000FF, #FF0000, #00FF00); /* Example gradient */
+  height: 10px; /* Set the height of the gradient */
+}
+
+/* Media Query for Small Screens */
+/* ...existing code... */
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    text-align: center; /* Center-align text in each section */
+    align-items: center; /* Center-align items */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce spacing between stacked sections */
+    text-align: center; /* Center-align text */
+    padding: 0; /* Remove padding */
+  }
+
+  .footer-section img {
+    margin: 0 auto 10px; /* Center the image */
+  }
+
+  .footer-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .footer-section ul li {
+    font-size: 12px; /* Slightly smaller font for mobile devices */
+    margin-bottom: 5px; /* Spacing between list items */
+  }
+
+  .footer-section a {
+    color: black; /* Set link color */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .footer-section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+  .footer-copyright {
+    text-align: center; /* Center-align the copyright text */
+    font-size: 12px; /* Adjust font size */
+    margin-top: 10px; /* Reduce spacing above the copyright text */
+  }
+}
+
+/* ...existing code... */
+
+
+    /* *************************************************************8 */
+    /* About Styles */
+    #about .container {
+      width: 1700px; /* Adjust this to change the container's width */
+      padding: 10px 20px; /* Adjust padding as needed */
+      text-align: center;
+      position: relative;
+
+
+  }
+  
+  
+  #about .image {
+      width: 100%; /* Ensure the image takes full width of the container */
+      height: 580px; /* Adjust the height to make the image bigger */
+
+  }
+  
+  #about .image img {
+      display: block;
+      margin: 0 auto;
+      width: 100%; /* Make image take full width of the container */
+      height: 100%; /* Make image take full height of its parent */
+      max-width: 100%; /* Ensure image scales with container */
+      border-radius: 8px; /* Keep the rounded corners */
+  }
+
+
+
+  #about .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .centered h1 {
+    font-size: 7rem;
+  }
+  .centered h3 {
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+  
+  #about .box {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Keep the box aligned to the left */
+    transform: translateY(-50%); /* Vertically center the box */
+    background-color: rgba(44, 44, 44, 0.548); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 20px;
+    text-align: center; /* Center the text inside the box */
+    width: 40%; /* Box takes 40% of the image width */
+    height: 100%; /* Box takes the full height of the image */
+    display: flex; /* Make the box a flex container */
+    flex-direction: column; /* Arrange the text in a column */
+    justify-content: center; /* Center the content vertically */
+    border-radius: 10px;
+  }
+
+  
+  #about .box h3,
+  #about .box p {
+  text-align: left;
+  color: #ffffff;
+
+  }
+  
+  #about .container .image .box h3{
+    font-size: 2.9em;
+    font-weight: bolder;
+  }
+  
+  #about .box p {
+    font-size: 1.0em;
+    font-weight: 200;
+  }
+
+  .head_title h1{
+    font-size: 2.8rem;
+    font-weight: 400;
+  
+  }
+/* ...existing code... */
+
+@media (max-width: 768px) {
+  #about .container {
+    width: 100%;
+    padding: 0; /* Remove padding */
+  }
+
+  #about .image {
+    width: 100%;
+    height: auto;
+    padding: 0; /* Remove padding */
+  }
+
+  #about .image img {
+    width: 100%;
+    height: auto;
+    margin: 0; /* Remove margin */
+  }
+
+  #about .box {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .centered h1 {
+    font-size: 3rem;
+  }
+
+  .centered h3 {
+    font-size: 0.8rem;
+  }
+
+  #about .container .image .box h3 {
+    font-size: 1.5em;
+  }
+
+  #about .box p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  #about .container {
+    width: 100%;
+    padding: 0; /* Remove padding */
+  }
+
+  #about .image {
+    width: 100%;
+    height: auto;
+    padding: 0; /* Remove padding */
+  }
+
+  #about .image img {
+    width: 100%;
+    height: auto;
+    margin: 0; /* Remove margin */
+  }
+
+  #about .box {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .centered h1 {
+    font-size: 2rem;
+  }
+
+  .centered h3 {
+    font-size: 0.6rem;
+  }
+
+  #about .container .image .box h3 {
+    font-size: 1.2em;
+  }
+
+  #about .box p {
+    font-size: 0.7em;
+  }
+}
+
+/* ...existing code... */
+  
+ /* Existing styles for the #about_us section */
+#about_us {
+  margin: 20px 0;
+  padding-right: 40px;
+}
+
+#about_us .container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.head_content {
+  border-bottom: 1px solid #666;
+}
+
+.head_content h2 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex; /* Flex layout applied */
+  gap: 20px;
+  padding-top: 20px;
+  align-items: center; /* Align items to the top */
+}
+
+.left_side, .right_side {
+  width: 50%; /* Each side takes 50% */
+  flex-basis: 50%; /* Ensures equal width in flex container */
+}
+
+.right_side {
+  display: flex; /* Make the right side a flex container */
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center; /* Center content vertically */
+}
+
+#image-left img {
+  width: 90%; /* Make the image responsive */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 25px;
+}
+
+#about_us h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  color: #53b848;
+
+}
+
+#about_us .right_side h2 {
+  font-size: 28px;
+  padding-bottom: 10px;
+  color: #53b848;
+  font-weight: bold;
+}
+
+#about_us p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+
+}
+
+/* Typing animation for the h1 tag */
+h1.typing-demo {
+  font-weight: bolder;
+}
+
+.typing-demo {
+  width: 0; /* Start with no width */
+  animation: typing-reverse 4s steps(29) 1s infinite, blink .5s step-end infinite alternate;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-weight: bolder;
+  color: #53b848;
+
+
+}
+
+/* Keyframes for typing and reverse typing */
+@keyframes typing-reverse {
+  0% {
+      width: 0;
+  }
+  50% {
+      width: 9ch;
+  }
+  100% {
+      width: 0;
+  }
+}
+
+/* Keyframes for the blinking cursor effect */
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column; /* Stack left and right sections */
+    }
+  
+    .left_side, .right_side {
+      width: 100%;            /* Full width when stacked */
+    }
+  
+    #about_us h1 {
+      font-size: 2rem;
+    }
+  
+    #about_us p {
+      font-size: 0.9rem;
+    }
+  
+    #about_us .container {
+      width: 90%;
+      padding-right: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #about_us h1 {
+      font-size: 1.5rem;
+    }
+  
+    #about_us p {
+      font-size: 0.8rem;
+    }
+  
+    #about_us {
+      padding-right: 10px;
+    }
+  }
+  
