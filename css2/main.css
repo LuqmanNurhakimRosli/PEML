@@ -435,8 +435,8 @@ footer {
 /* About Styles */
 #about .container {
   width: 100%; /* Make container responsive */
-  max-width: 1700px; /* Set a max-width for larger screens */
-  padding: 10px 20px; /* Adjust padding as needed */
+  max-width: 1500px; /* Set a max-width for larger screens */
+  padding: 10px 70px; /* Adjust padding as needed */
   text-align: center;
   position: relative;
   margin: 0 auto; /* Center the container */
@@ -514,6 +514,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   #about .container {
+    max-width: 10rem;
     padding: 0 15px; /* Remove padding */
   }
 
@@ -550,6 +551,7 @@ footer {
 
 @media (max-width: 480px) {
   #about .container {
+    max-width: 50rem;
     padding: 0 15px; /* Remove padding */
   }
 

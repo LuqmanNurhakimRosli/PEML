@@ -95,3 +95,45 @@
     color: #cccccc;
     line-height: 1.5;
   }
+  @media (max-width: 480px) {
+    .boxes {
+      display: flex;
+      flex-direction: column; /* Stack boxes vertically */
+      align-items: center; /* Center align boxes */
+      gap: 10px; /* Add space between boxes */
+    }
+  
+    .box {
+      flex: unset; /* Allow the box to take its natural size */
+      width: 90%; /* Set a width suitable for mobile screens */
+      text-align: center; /* Keep content centered */
+      padding: 20px;
+      margin: 0 auto; /* Center the box horizontally */
+      border-bottom: 2px solid transparent; /* Default transparent */
+    }
+  
+    .box:not(:last-child) {
+      border-bottom: 2px solid #2c46d8; /* Add blue bottom border except last one */
+    }
+  
+    /* Remove the right border (pseudo-element) for mobile */
+    .box:not(:last-child)::after {
+      content: none; /* Disable the pseudo-element entirely */
+    }
+  
+    .box img {
+      width: 50px; /* Adjust icon size for better visibility on smaller screens */
+      height: 50px;
+    }
+  
+    .box h3 {
+      font-size: 1.5rem; /* Slightly larger font size for headings */
+      margin: 10px 0;
+    }
+  
+    .box p {
+      font-size: 1rem; /* Adjust text size */
+      line-height: 1.5;
+    }
+  }
+  
