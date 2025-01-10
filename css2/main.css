@@ -370,117 +370,103 @@ footer {
 }
 
 /* ...existing code... */
+/* About Styles */
+#about .container {
+  width: 100%; /* Make container responsive */
+  max-width: 1700px; /* Set a max-width for larger screens */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  position: relative;
+  margin: 0 auto; /* Center the container */
+}
 
+#about .image {
+  width: 100%; /* Ensure the image takes full width of the container */
+  height: auto; /* Make height auto to maintain aspect ratio */
+  position: relative;
+}
 
-    /* *************************************************************8 */
-    /* About Styles */
-    #about .container {
-      width: 1700px; /* Adjust this to change the container's width */
-      padding: 10px 20px; /* Adjust padding as needed */
-      text-align: center;
-      position: relative;
+#about .image img {
+  display: block;
+  width: 100%; /* Make image take full width of the container */
+  height: auto; /* Make height auto to maintain aspect ratio */
+  max-width: 100%; /* Ensure image scales with container */
+  border-radius: 8px; /* Keep the rounded corners */
+}
 
+#about .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
-  }
-  
-  
-  #about .image {
-      width: 100%; /* Ensure the image takes full width of the container */
-      height: 580px; /* Adjust the height to make the image bigger */
+.centered h1 {
+  font-size: 7rem;
+}
 
-  }
-  
-  #about .image img {
-      display: block;
-      margin: 0 auto;
-      width: 100%; /* Make image take full width of the container */
-      height: 100%; /* Make image take full height of its parent */
-      max-width: 100%; /* Ensure image scales with container */
-      border-radius: 8px; /* Keep the rounded corners */
-  }
+.centered h3 {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
 
+#about .box {
+  position: absolute;
+  top: 50%;
+  left: 0; /* Keep the box aligned to the left */
+  transform: translateY(-50%); /* Vertically center the box */
+  background-color: rgba(44, 44, 44, 0.548); /* Semi-transparent black background */
+  color: white; /* White text color */
+  padding: 20px;
+  text-align: center; /* Center the text inside the box */
+  width: 40%; /* Box takes 40% of the image width */
+  height: 100%; /* Box takes the full height of the image */
+  display: flex; /* Make the box a flex container */
+  flex-direction: column; /* Arrange the text in a column */
+  justify-content: center; /* Center the content vertically */
+  border-radius: 10px;
+}
 
-
-  #about .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-
-  .centered h1 {
-    font-size: 7rem;
-  }
-  .centered h3 {
-    font-size: 1.3rem;
-    font-weight: 200;
-  }
-  
-  #about .box {
-    position: absolute;
-    top: 50%;
-    left: 0; /* Keep the box aligned to the left */
-    transform: translateY(-50%); /* Vertically center the box */
-    background-color: rgba(44, 44, 44, 0.548); /* Semi-transparent black background */
-    color: white; /* White text color */
-    padding: 20px;
-    text-align: center; /* Center the text inside the box */
-    width: 40%; /* Box takes 40% of the image width */
-    height: 100%; /* Box takes the full height of the image */
-    display: flex; /* Make the box a flex container */
-    flex-direction: column; /* Arrange the text in a column */
-    justify-content: center; /* Center the content vertically */
-    border-radius: 10px;
-  }
-
-  
-  #about .box h3,
-  #about .box p {
+#about .box h3,
+#about .box p {
   text-align: left;
   color: #ffffff;
+}
 
-  }
-  
-  #about .container .image .box h3{
-    font-size: 2.9em;
-    font-weight: bolder;
-  }
-  
-  #about .box p {
-    font-size: 1.0em;
-    font-weight: 200;
-  }
+#about .container .image .box h3 {
+  font-size: 2.9em;
+  font-weight: bolder;
+}
 
-  .head_title h1{
-    font-size: 2.8rem;
-    font-weight: 400;
-  
-  }
-/* ...existing code... */
+#about .box p {
+  font-size: 1.0em;
+  font-weight: 200;
+}
 
+.head_title h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   #about .container {
-    width: 100%;
     padding: 0; /* Remove padding */
   }
 
   #about .image {
-    width: 100%;
-    height: auto;
-    padding: 0; /* Remove padding */
+    height: auto; /* Ensure height is auto for responsiveness */
   }
 
   #about .image img {
-    width: 100%;
-    height: auto;
-    margin: 0; /* Remove margin */
+    height: auto; /* Ensure height is auto for responsiveness */
   }
 
   #about .box {
-    width: 100%;
-    height: auto;
-    padding: 5px;
+    width: 80%; /* Increase box width for better readability */
+    height: auto; /* Make height auto */
+    padding: 15px; /* Adjust padding */
   }
 
   .centered h1 {
@@ -502,26 +488,21 @@ footer {
 
 @media (max-width: 480px) {
   #about .container {
-    width: 100%;
     padding: 0; /* Remove padding */
   }
 
   #about .image {
-    width: 100%;
-    height: auto;
-    padding: 0; /* Remove padding */
+    height: auto; /* Ensure height is auto for responsiveness */
   }
 
   #about .image img {
-    width: 100%;
-    height: auto;
-    margin: 0; /* Remove margin */
+    height: auto; /* Ensure height is auto for responsiveness */
   }
 
   #about .box {
-    width: 100%;
-    height: auto;
-    padding: 5px;
+    width: 90%; /* Increase box width for better readability */
+    height: auto; /* Make height auto */
+    padding: 10px; /* Adjust padding */
   }
 
   .centered h1 {
