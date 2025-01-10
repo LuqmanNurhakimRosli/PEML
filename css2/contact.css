@@ -1,16 +1,17 @@
 #contact {
   margin: 10px 0 50px;
- }
-  .section-container .main-header {
-    font-size: 3em;
-    margin: 20px 0; /* Adds spacing between header and contact container */
-    padding-left: 13%;
-    color: #53b848;
-    border-bottom: 1px solid #000000;
-    width: 80%;
-  }
-  
-  .contact-one {
+}
+
+.section-container .main-header {
+  font-size: 3em;
+  margin: 20px 0;
+  padding-left: 13%;
+  color: #53b848;
+  border-bottom: 1px solid #000000;
+  width: 80%;
+}
+
+.contact-one {
   max-width: 80%;
   margin: 20px auto;
   padding: 20px;
@@ -18,131 +19,150 @@
   gap: 20px;
   flex-wrap: wrap;
   border-radius: 8px;
-  }
-  
-  /* Ensure styles apply whether or not .contact-one is present */
- #contact .contact-info,
-  #contact .contact-info {
-    flex: 1;
-    min-width: 0;
-    padding: 20px 0 20px 0px;
-    /* background-color: #f5f5f5; */
-  }
-  
-  
-  #contact .contact-form,
-  #contact .contact-form {
-    flex: 2;
-    min-width: 0;
-    padding: 20px;
-    /* background-color: #f5f5f5; */
-    border-radius: 0 8px 8px 0;
-    border-left: 1px solid #666;
-    padding-left: 50px;
-  
-  }
-  
-  /* Form styling */
-  .contact-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-size: 14px;
-  }
-
-  #email {
-    margin-top: 0;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .contact-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .contact-form input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Responsive Adjustment */
-  @media (max-width: 768px) {
-    .section-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-  
-    .section-container .contact-info,
-    .contact-one .contact-info {
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-        border-radius: 8px 8px 0 0;
-        margin-bottom: 20px;
-    }
-  
-    .section-container .contact-form,
-    .contact-one .contact-form {
-        border-radius: 0 0 8px 8px;
-    }
-  }
-
-  #contact a{
-    color: #666;
-  }
-  
-  #contact .container {
-    margin: 0 auto;          /* Center the container */
-    padding: 20px 67px;         /* Add vertical padding */
-  }
-  
-  #contact .head_content{
-    border-bottom: 1px solid #666;
-    padding-bottom: 20px;
-  }
-  
-  #contact .head_content h2 {
-    font-size: 2.5rem;         /* Smaller heading for the "What we do" section */
-    color: #000000;             /* Light color for subtitle */
-    margin-bottom: 10px;
-  }
-  
-  .content {
-    padding-top: 20px;
-    display: flex;
-    gap: 25px;               /* Spacing between left and right sections */
-    align-items: flex-start; /* Align items to the top */
 }
-  
-#contact .left_side{
+
+#contact .contact-info,
+#contact .contact-info {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 0 20px 0px;
+}
+
+#contact .contact-form,
+#contact .contact-form {
+  flex: 2;
+  min-width: 0;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  border-left: 1px solid #666;
+  padding-left: 50px;
+}
+
+/* Form styling */
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+#email {
+  margin-top: 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#contact a {
+  color: #666;
+}
+
+#contact .container {
+  margin: 0 auto;
+  padding: 20px 67px;
+}
+
+#contact .head_content {
+  border-bottom: 1px solid #666;
+  padding-bottom: 20px;
+}
+
+#contact .head_content h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding-top: 20px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+#contact .left_side {
   width: 35%;
 }
+
 #contact .right_side {
   width: auto !important;
 }
 
-  /* Left side (Main title) */
-  #contact h1 {
-    font-size: 2.5rem;       /* Large font size for main heading */
-    font-weight: 400;        /* Set weight for readability */
-    color: #53b848;          /* Dark purple color for main text */
-    line-height: 1.2;        /* Tight line height */
+#contact h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #53b848;
+  line-height: 1.2;
+}
+
+#contact p {
+  font-size: 0.7rem;
+  color: #666;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  /* Right side (Paragraphs) */
-  #contact p {
-    font-size: 0.7rem;         /* Standard font size for body text */
-    color: #666;             /* Slightly lighter color for readability */
-    line-height: 1.3;        /* Line height for better readability */
-    margin-bottom: 1rem;     /* Space between paragraphs */
+
+  .section-container .contact-info,
+  .contact-one .contact-info {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
   }
+
+  .section-container .contact-form,
+  .contact-one .contact-form {
+    border-left: none;
+    border-radius: 0 0 8px 8px;
+    padding-left: 0;
+  }
+
+  #contact .content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact .contact-form {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  #contact .contact-info {
+    border-right: none;
+  }
+
+  #contact .content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+}
