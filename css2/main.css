@@ -20,6 +20,7 @@ html {
 
   body {
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -74,6 +75,14 @@ span {
     padding-top: 20px; /* Use padding to create space instead of margin */
     color: black;
     text-align: left; /* Align text to the left */
+}
+
+@media (max-width: 992px) {
+  #header h1 {
+    font-size: 1.55rem;
+    padding-top: 10px; /* Use padding to create space instead of margin */
+
+}
 }
 
   /* *************************************************** */
@@ -244,75 +253,127 @@ span {
 /* ---------------------------------------------------------------------- */
 /* Footer Styles */
 /* Footer General Styles */
+/* General Footer Styles */
 footer {
-  margin: 0; /* Ensure no unexpected margin */
+  margin: 0;
   padding: 20px 0;
   border-top: 2px solid #53b848;
-  position: relative;
-  width: 100vw; /* Use viewport width explicitly */
+  background-color: #f9f9f9; /* Light background for better contrast */
+  width: 100%;
   box-sizing: border-box;
 }
-
 
 /* Footer Container */
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Distribute sections evenly with spaces */
-  align-items: flex-start; /* Align items at the top */
-  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
-  max-width: 1200px; /* Set maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Inner padding for spacing */
-  box-sizing: border-box; /* Avoid issues with padding and width */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /* Individual Footer Section */
 .footer-section {
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
-  margin: 10px; /* Spacing between sections */
-  text-align: center; /* Center-align content */
+  flex: 1 1 300px; /* Allow sections to grow and shrink */
+  margin: 10px;
+  text-align: left; /* Align text to the left for better readability */
 }
 
 .footer-section img {
-  max-width: 150px; /* Set max width for images */
-  height: auto; /* Maintain aspect ratio */
-  margin: 0 auto 10px; /* Center the image and add bottom spacing */
-  display: block; /* Ensure the image is a block element */
-  border-radius: 8px; /* Add rounded corners */
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
 }
 
 .footer-section h3 {
   font-size: 18px;
-  margin-bottom: 10px; /* Add spacing below the heading */
+  margin-bottom: 10px;
   font-weight: bold;
+  color: #333; /* Darker text for better readability */
 }
 
 .footer-section ul {
-  list-style: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 5px; /* Spacing between list items */
-  font-size: 14px; /* Adjust font size */
-  word-wrap: break-word; /* Handle long words to prevent overflow */
+  margin-bottom: 8px; /* Slightly more spacing between list items */
+  font-size: 14px;
+  color: #555; /* Slightly lighter text for better contrast */
+  line-height: 1.5; /* Improve readability */
 }
 
 .footer-section a {
-  color: black; /* Set link color */
-  text-decoration: none; /* Remove underline */
+  color: #333; /* Darker link color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .footer-section a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  color: #53b848; /* Green color on hover */
+  text-decoration: underline;
 }
 
 /* Footer Copyright Section */
 .footer-copyright {
-  text-align: center; /* Center-align the copyright text */
-  font-size: 12px; /* Adjust font size */
-  margin-top: 20px; /* Add spacing above the copyright text */
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  color: #777; /* Lighter text for copyright */
+  padding: 10px 0;
+  border-top: 1px solid #ddd; /* Add a subtle border above the copyright */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center-align sections */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .footer-section {
+    flex: 1 1 100%; /* Full width for each section */
+    margin: 10px 0; /* Reduce margin between sections */
+    text-align: center; /* Center-align text */
+  }
+
+  .footer-section img {
+    margin: 0 auto 10px; /* Center the logo */
+  }
+
+  .footer-section h3 {
+    font-size: 16px; /* Slightly smaller heading */
+  }
+
+  .footer-section ul li {
+    font-size: 13px; /* Slightly smaller text */
+  }
+
+  .footer-copyright {
+    font-size: 11px; /* Smaller copyright text */
+    margin-top: 10px; /* Reduce spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 15px; /* Even smaller heading for very small screens */
+  }
+
+  .footer-section ul li {
+    font-size: 12px; /* Even smaller text for very small screens */
+  }
+
+  .footer-copyright {
+    font-size: 10px; /* Smaller copyright text for very small screens */
+  }
 }
 
 /* Gradient Divider (Optional) */
@@ -452,7 +513,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   #about .container {
-    padding: 0; /* Remove padding */
+    padding: 0 15px; /* Remove padding */
   }
 
   #about .image {
@@ -488,15 +549,19 @@ footer {
 
 @media (max-width: 480px) {
   #about .container {
-    padding: 0; /* Remove padding */
+    padding: 0 15px; /* Remove padding */
   }
 
   #about .image {
-    height: auto; /* Ensure height is auto for responsiveness */
+    width: 100%; /* Make the container full width */
+    height: auto; /* Adjust the height based on content */
   }
 
   #about .image img {
-    height: auto; /* Ensure height is auto for responsiveness */
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image if necessary */
+    display: block; /* Prevent inline image spacing issues */
   }
 
   #about .box {
