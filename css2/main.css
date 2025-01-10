@@ -278,8 +278,9 @@ footer {
 /* Individual Footer Section */
 .footer-section {
   flex: 1 1 300px; /* Allow sections to grow and shrink */
-  margin: 10px;
+  margin: 0; /* Add some spacing between sections */
   text-align: left; /* Align text to the left for better readability */
+  padding: 0 70px;
 }
 
 .footer-section img {
