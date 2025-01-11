@@ -1,14 +1,24 @@
+/* Base Font Settings */
+body {
+  font-family: 'Roboto', 'Open Sans', sans-serif; /* Modern, clean font */
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
 #contact {
   margin: 10px 0 50px;
 }
 
 .section-container .main-header {
-  font-size: 3em;
+  font-size: 2.5em; /* Reduced slightly for better readability */
   margin: 20px 0;
   padding-left: 13%;
   color: #53b848;
   border-bottom: 1px solid #000000;
   width: 80%;
+  font-weight: 700; /* Bold for better emphasis */
 }
 
 .contact-one {
@@ -21,14 +31,14 @@
   border-radius: 8px;
 }
 
-#contact .contact-info,
 #contact .contact-info {
   flex: 1;
   min-width: 0;
   padding: 20px 0 20px 0px;
+  font-size: 1rem; /* Adjust for readability */
+  color: #444;
 }
 
-#contact .contact-form,
 #contact .contact-form {
   flex: 2;
   min-width: 0;
@@ -42,27 +52,27 @@
 .contact-form label {
   display: block;
   margin: 10px 0 5px;
-  font-size: 14px;
-}
-
-#email {
-  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 600; /* Bold for clarity */
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem; /* Slightly larger font for inputs */
 }
 
 .contact-form input[type="submit"] {
   background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -87,7 +97,7 @@
 }
 
 #contact .head_content h2 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Adjust for readability */
   color: #000000;
   margin-bottom: 10px;
 }
@@ -108,24 +118,29 @@
 }
 
 #contact h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 2rem; /* More mobile-friendly */
+  font-weight: 700; /* Bold for emphasis */
   color: #53b848;
   line-height: 1.2;
 }
 
 #contact p {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: #666;
-  line-height: 1.3;
+  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .section-container {
-    flex-direction: column;
-    align-items: stretch;
+  body {
+    font-size: 0.9rem; /* Slightly smaller for tablets */
+  }
+
+  .section-container .main-header {
+    font-size: 2rem;
+    padding-left: 10%;
+    width: 100%;
   }
 
   .section-container .contact-info,
@@ -151,6 +166,16 @@
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 0.85rem; /* Smaller font for smaller screens */
+  }
+
+  .section-container .main-header {
+    font-size: 1.8rem; /* Fits smaller screens */
+    padding-left: 5%;
+    width: 100%;
+  }
+
   #contact .contact-form {
     border-left: none;
     padding-left: 0;
@@ -164,5 +189,21 @@
     flex-direction: column;
     gap: 15px;
     align-items: stretch;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 }
