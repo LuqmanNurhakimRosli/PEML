@@ -1,139 +1,123 @@
-
 .valuesx {
-    padding: 15px 80px 10px;
-  }
-  
-  .vission-containerx {
-    display: flex; /* Flex layout for content and image side by side */
-    justify-content: space-between; /* Space between the content and image */
-    align-items: center; /* Align content and image vertically center */
-    gap: 40px; /* Space between the two sections */
-    max-width: 1200px; /* Maximum width of the container */
-    margin: 0 auto; /* Center container */
-    padding: 20px 80px 40px; /* Top, sides, and bottom padding */
-    animation: slide-in 0.9s ease-out; /* Apply the slide-in animation */
-  
-  }
-  
-  .vission-contentx {
-    flex: 1; /* Allow content to take up available space */
-    display: block; /* Use block display for normal flow */
-  }
-  
-  .valuesx .vission-contentx h2 {
-    text-align: left ; 
-    font-size: 28px;
-    padding-bottom: 10px;
-    color: #53b848;
-    font-weight: bold;
-  }
-  
-  .valuesx .vission-contentx p {
-    text-align: justify; 
-    padding-right: 20%;
-  font-size: 16px;
-    color: #555; /* Color for the text */
-  
-  }
-  
-  .vission-imgx {
-    flex: 1; /* Allow image to take up available space */
-    max-width: 500px; /* Maximum width for the image */
-  }
-  
-  .vission-imgx img {
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Keep aspect ratio */
-    border-radius: 25px;
-  
-  }
+  padding: 15px 20px 10px; /* Reduced padding for mobile */
+}
 
-  /* Boxes container */
-  .boxes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    /* gap: 20px; */
-    padding: 2rem 0;;
-  }
-  
-  /* Individual box */
+.vission-containerx {
+  display: flex;
+  flex-direction: column; /* Stack content and image vertically on mobile */
+  justify-content: center; /* Center-align content */
+  align-items: center; /* Center-align items */
+  gap: 20px; /* Reduced gap for mobile */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px 40px; /* Reduced padding for mobile */
+  animation: slide-in 0.9s ease-out;
+}
 
-  .box {
-    position: relative; /* Required for pseudo-elements */
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    color: #ffffff;
+.vission-contentx {
+  flex: 1;
+  display: block;
+  text-align: center; /* Center-align text for mobile */
+}
+
+.valuesx .vission-contentx h2 {
+  text-align: center; /* Center-align heading for mobile */
+  font-size: 24px; /* Smaller font size for mobile */
+  padding-bottom: 10px;
+  color: #53b848;
+  font-weight: bold;
+}
+
+.valuesx .vission-contentx p {
+  text-align: justify; /* Justify text for better readability */
+  padding-right: 0; /* Remove right padding for mobile */
+  font-size: 14px; /* Smaller font size for mobile */
+  color: #555;
+}
+
+.vission-imgx {
+  flex: 1;
+  max-width: 100%; /* Full width for mobile */
+}
+
+.vission-imgx img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Slightly smaller border radius for mobile */
+}
+
+/* Boxes container */
+.boxes {
+  display: flex;
+  flex-direction: column; /* Stack boxes vertically on mobile */
+  justify-content: center; /* Center-align boxes */
+  align-items: center; /* Center-align items */
+  gap: 10px; /* Reduced gap for mobile */
+  margin-top: 20px;
+  padding: 1rem 0; /* Reduced padding for mobile */
+}
+
+/* Individual box */
+.box {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  width: 90%; /* Full width for mobile */
+  margin: 0 auto; /* Center-align boxes */
 }
 
 .box:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 20%; /* Adjust to position the shorter border vertically */
-  right: 0;
-  width: 2px; /* Border thickness */
-  height: 70%; /* Make the border 50% of the box height */
-  background-color: #2c46d8; /* Border color */
+  content: none; /* Remove vertical border for mobile */
 }
-  
-  .box img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
+
+.box:not(:last-child) {
+  border-bottom: 2px solid #2c46d8; /* Add bottom border for mobile */
+}
+
+.box img {
+  width: 40px; /* Adjusted icon size for mobile */
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  font-size: 1.25rem; /* Adjusted font size for mobile */
+  margin: 10px 0;
+  color: #1c2c83;
+  font-weight: bolder;
+}
+
+.box p {
+  font-size: 0.9rem; /* Adjusted font size for mobile */
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  .valuesx {
+      padding: 15px 10px 10px; /* Further reduced padding for smaller screens */
   }
-  
+
+  .vission-containerx {
+      padding: 20px 10px 40px; /* Further reduced padding for smaller screens */
+  }
+
+  .valuesx .vission-contentx h2 {
+      font-size: 22px; /* Smaller font size for smaller screens */
+  }
+
+  .valuesx .vission-contentx p {
+      font-size: 13px; /* Smaller font size for smaller screens */
+  }
+
   .box h3 {
-    font-size: 1.25rem;
-    margin: 10px 0;
-    color: #1c2c83;
-    font-weight: bolder;
+      font-size: 1.1rem; /* Smaller font size for smaller screens */
   }
-  
+
   .box p {
-    font-size: 1rem;
-    color: #cccccc;
-    line-height: 1.5;
+      font-size: 0.85rem; /* Smaller font size for smaller screens */
   }
-  @media (max-width: 480px) {
-    .boxes {
-      display: flex;
-      flex-direction: column; /* Stack boxes vertically */
-      align-items: center; /* Center align boxes */
-      gap: 10px; /* Add space between boxes */
-    }
-  
-    .box {
-      flex: unset; /* Allow the box to take its natural size */
-      width: 90%; /* Set a width suitable for mobile screens */
-      text-align: center; /* Keep content centered */
-      padding: 20px;
-      margin: 0 auto; /* Center the box horizontally */
-      border-bottom: 2px solid transparent; /* Default transparent */
-    }
-  
-    .box:not(:last-child) {
-      border-bottom: 2px solid #2c46d8; /* Add blue bottom border except last one */
-    }
-  
-    /* Remove the right border (pseudo-element) for mobile */
-    .box:not(:last-child)::after {
-      content: none; /* Disable the pseudo-element entirely */
-    }
-  
-    .box img {
-      width: 50px; /* Adjust icon size for better visibility on smaller screens */
-      height: 50px;
-    }
-  
-    .box h3 {
-      font-size: 1.5rem; /* Slightly larger font size for headings */
-      margin: 10px 0;
-    }
-  
-    .box p {
-      font-size: 1rem; /* Adjust text size */
-      line-height: 1.5;
-    }
-  }
-  
+}
