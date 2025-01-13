@@ -1,3 +1,4 @@
+/* General Styles */
 .production-section h2 {
     position: relative; /* Positioning context for the pseudo-element */
     font-size: 2em; /* Adjust font size as needed */
@@ -90,6 +91,7 @@
 }
 
 .production-section .production-title {
+    color: #408a37;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -105,8 +107,65 @@
     display: contents;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .production-section .production-container {
         grid-template-columns: 1fr; /* Stack on small screens */
+    }
+
+    .production-section .production-item,
+    .production-section .production-items {
+        text-align: center; /* Center text for mobile */
+    }
+
+    .production-section .production-title {
+        text-align: center; /* Center title for mobile */
+    }
+
+    .production-section .production-text {
+        text-align: center; /* Center text for mobile */
+    }
+}
+
+/* Mobile Styles for 480px and below */
+@media screen and (max-width: 480px) {
+    .production-section h2 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+        padding: 15px 0; /* Adjust padding for mobile */
+    }
+
+    .production-section h2::after,
+    .production-section .second h2::after {
+        width: 20%; /* Increase border width for mobile */
+    }
+
+    .production-section .production-container {
+        gap: 20px; /* Reduce gap between items for mobile */
+        padding: 0 10px 40px; /* Adjust padding for mobile */
+    }
+
+    .production-section .production-item,
+    .production-section .production-items {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .production-section .production-item::after,
+    .production-section .production-items::after {
+        width: 40%; /* Adjust border width for mobile */
+        transform: translateX(-50%); /* Center the border */
+    }
+
+    .production-section .production-items img,
+    .production-section .production-item img {
+        width: 50px; /* Smaller image size for mobile */
+        height: 50px;
+    }
+
+    .production-section .production-title {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    .production-section .production-text {
+        font-size: 13px; /* Smaller font size for mobile */
     }
 }
