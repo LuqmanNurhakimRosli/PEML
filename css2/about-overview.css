@@ -1,55 +1,6 @@
-.valuesx {
-  padding: 15px 20px 10px; /* Reduced padding for mobile */
-}
-
-.vission-containerx {
-  display: flex;
-  flex-direction: column; /* Stack content and image vertically on mobile */
-  justify-content: center; /* Center-align content */
-  align-items: center; /* Center-align items */
-  gap: 20px; /* Reduced gap for mobile */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 20px 40px; /* Reduced padding for mobile */
-  animation: slide-in 0.9s ease-out;
-}
-
-.vission-contentx {
-  flex: 1;
-  display: block;
-  text-align: center; /* Center-align text for mobile */
-}
-
-.valuesx .vission-contentx h2 {
-  text-align: center; /* Center-align heading for mobile */
-  font-size: 24px; /* Smaller font size for mobile */
-  padding-bottom: 10px;
-  color: #53b848;
-  font-weight: bold;
-}
-
-.valuesx .vission-contentx p {
-  text-align: justify; /* Justify text for better readability */
-  padding-right: 0; /* Remove right padding for mobile */
-  font-size: 14px; /* Smaller font size for mobile */
-  color: #555;
-}
-
-.vission-imgx {
-  flex: 1;
-  max-width: 100%; /* Full width for mobile */
-}
-
-.vission-imgx img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px; /* Slightly smaller border radius for mobile */
-}
-
-/* Boxes container */
+/* General styles for boxes */
 .boxes {
   display: flex;
-  flex-direction: column; /* Stack boxes vertically on mobile */
   justify-content: center; /* Center-align boxes */
   align-items: center; /* Center-align items */
   gap: 10px; /* Reduced gap for mobile */
@@ -66,14 +17,6 @@
   color: #ffffff;
   width: 90%; /* Full width for mobile */
   margin: 0 auto; /* Center-align boxes */
-}
-
-.box:not(:last-child)::after {
-  content: none; /* Remove vertical border for mobile */
-}
-
-.box:not(:last-child) {
-  border-bottom: 2px solid #2c46d8; /* Add bottom border for mobile */
 }
 
 .box img {
@@ -95,29 +38,57 @@
   line-height: 1.5;
 }
 
-/* Responsive Design for Mobile Screens */
+/* Desktop styles */
+@media (min-width: 769px) {
+  .boxes {
+    flex-direction: row; /* Display boxes in a row for desktop */
+  }
+
+  .box:not(:last-child) {
+    border-right: 2px solid #2c46d8; /* Add right border for desktop */
+    border-bottom: none; /* Remove bottom border for desktop */
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-  .valuesx {
-      padding: 15px 10px 10px; /* Further reduced padding for smaller screens */
+  .boxes {
+    flex-direction: column; /* Stack boxes vertically on mobile */
   }
 
-  .vission-containerx {
-      padding: 20px 10px 40px; /* Further reduced padding for smaller screens */
+  .box:not(:last-child) {
+    border-bottom: 2px solid #2c46d8; /* Add bottom border for mobile */
+    border-right: none; /* Remove right border for mobile */
   }
 
-  .valuesx .vission-contentx h2 {
-      font-size: 22px; /* Smaller font size for smaller screens */
-  }
-
-  .valuesx .vission-contentx p {
-      font-size: 13px; /* Smaller font size for smaller screens */
+  .box {
+    width: 100%; /* Full width for mobile */
   }
 
   .box h3 {
-      font-size: 1.1rem; /* Smaller font size for smaller screens */
+    font-size: 1.1rem; /* Smaller font size for smaller screens */
   }
 
   .box p {
-      font-size: 0.85rem; /* Smaller font size for smaller screens */
+    font-size: 0.85rem; /* Smaller font size for smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .boxes {
+    padding: 0.5rem 0; /* Further reduced padding for very small screens */
+  }
+
+  .box {
+    padding: 15px; /* Reduced padding for very small screens */
+  }
+
+  .box h3 {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .box p {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
   }
 }
