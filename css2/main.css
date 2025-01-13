@@ -514,12 +514,8 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   #about .container {
-    max-width: 10rem;
-    padding: 0 15px; /* Remove padding */
-  }
-
-  #about .image {
-    height: auto; /* Ensure height is auto for responsiveness */
+    max-width: 100%; /* Ensure container takes full width */
+    padding: 0 15px; /* Adjust padding for smaller screens */
   }
 
   #about .image img {
@@ -533,38 +529,31 @@ footer {
   }
 
   .centered h1 {
-    font-size: 3rem;
+    font-size: 3rem; /* Adjust font size for smaller screens */
   }
 
   .centered h3 {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
   }
 
   #about .container .image .box h3 {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Adjust font size for smaller screens */
   }
 
   #about .box p {
-    font-size: 0.8em;
+    font-size: 0.8em; /* Adjust font size for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   #about .container {
-    max-width: 50rem;
-    padding: 0 15px; /* Remove padding */
-  }
-
-  #about .image {
-    width: 100%; /* Make the container full width */
-    height: auto; /* Adjust the height based on content */
+    max-width: 100%; /* Ensure container takes full width */
+    padding: 0 15px; /* Adjust padding for very small screens */
   }
 
   #about .image img {
     width: 100%; /* Ensure the image takes the full width of the container */
     height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the image if necessary */
-    display: block; /* Prevent inline image spacing issues */
   }
 
   #about .box {
@@ -574,19 +563,19 @@ footer {
   }
 
   .centered h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjust font size for very small screens */
   }
 
   .centered h3 {
-    font-size: 0.6rem;
+    font-size: 0.6rem; /* Adjust font size for very small screens */
   }
 
   #about .container .image .box h3 {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Adjust font size for very small screens */
   }
 
   #about .box p {
-    font-size: 0.7em;
+    font-size: 0.7em; /* Adjust font size for very small screens */
   }
 }
 
