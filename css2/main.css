@@ -269,7 +269,7 @@ span {
 @media (max-width: 480px) {
   .under-nav .container {
       padding: 3px 0.5rem;
-      padding-left: 1rem;
+      padding-left: 5rem;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
   }
@@ -282,7 +282,7 @@ span {
 
   .under-nav {
       overflow-x: auto;
-      margin-bottom: 20px;
+      margin-bottom: 2px;
   }
 }
 /* ---------------------------------------------------------------------- */
@@ -616,9 +616,91 @@ footer {
 
 /* ...existing code... */
   
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.about-headline {
+  text-align: left;
+}
+
+.about-headline h1 {
+  font-size: 2rem;
+  color: #53b848;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.about-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .about-headline {
+      order: 2;
+      flex: 1;
+      text-align: right;
+  }
+
+  .about-description {
+      order: 1;
+      flex: 1;
+  }
+
+  .about-headline h1 {
+      font-size: 2.5rem;
+  }
+}
+/* ...existing code... */
+
+@media (max-width: 480px) {
+  #about_us {
+      margin: 10px 0;
+      padding-right: 15px;
+  }
+
+  .about-content {
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px 0;
+  }
+
+  .about-headline {
+      order: 1;
+      text-align: left;
+  }
+
+  .about-description {
+      order: 2;
+  }
+
+  .about-headline h1 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+  }
+
+  .about-description p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+  }
+
+  #about_us .container {
+      padding: 10px 15px;
+  }
+}
  /* Existing styles for the #about_us section */
 #about_us {
-  margin: 20px 0;
+  margin: 10px 0 20px;
   padding-right: 40px;
 }
 
@@ -829,5 +911,6 @@ h1.typing-demo {
     #about_us {
       padding-right: 10px;
     }
+    
   }
   
