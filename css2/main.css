@@ -269,7 +269,7 @@ span {
 @media (max-width: 480px) {
   .under-nav .container {
       padding: 3px 0.5rem;
-      padding-left: 5rem;
+      padding-left: 4.2rem;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
   }
