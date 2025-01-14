@@ -79,17 +79,56 @@
   margin-bottom: 20px;
 }
 
+/* ...existing code... */
+
 /* Responsive Design for Mobile Fonts */
 @media (max-width: 768px) {
+  #snapshot {
+    padding: 0 0 70px 0;
+  }
+
   #snapshot h2 {
-      font-size: 1.5em; /* Smaller font size for mobile */
+      font-size: 1.5em;
   }
 
   .snapshot-column h3 {
-      font-size: 20px; /* Smaller font size for mobile */
+      font-size: 20px;
   }
 
   .snapshot-column p {
-      font-size: 0.9rem; /* Smaller font size for mobile */
+      font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  
+  #snapshot h2 {
+      font-size: 1.2em;
+  }
+
+  .snapshot-column h3 {
+      font-size: 18px;
+  }
+
+  .snapshot-column p {
+      font-size: 0.85rem;
+  }
+
+  #snapshot .container {
+      padding: 0 20px;
+  }
+
+  .snapshot-column {
+      padding: 10px;
+      min-width: 200px;
+  }
+
+  .snapshot-img {
+      height: 150px;
+  }
+
+  #snapshot {
+      padding: 0px 0 70px 0;
   }
 }
