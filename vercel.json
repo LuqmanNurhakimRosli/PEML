@@ -1,38 +1,39 @@
 {
     "version": 2,
     "cleanUrls": true,
-    "routes": [
+    "trailingSlash": false,
+    "rewrites":   [
       {
-        "src": "/about_overview",
-        "dest": "/about_overview.html"
+        "source": "/about_overview",
+        "destination": "/about_overview.html"
       },
       {
-        "src": "/about_leader",
-        "dest": "/about_leader.html"
+        "source": "/about_leader",
+        "destination": "/about_leader.html"
       },
       {
-        "src": "/business_overview",
-        "dest": "/business_overview.html"
+        "source": "/business_overview",
+        "destination": "/business_overview.html"
       },
       {
-        "src": "/business_petroleum",
-        "dest": "/business_petroleum.html"
+        "source": "/business_petroleum",
+        "destination": "/business_petroleum.html"
       },
       {
-        "src": "/business_petrochemical",
-        "dest": "/business_petrochemical.html"
+        "source": "/business_petrochemical",
+        "destination": "/business_petrochemical.html"
       },
       {
-        "src": "/contact",
-        "dest": "/contact.html"
+        "source": "/contact",
+        "destination": "/contact.html"
       },
       {
-        "src": "/home",
-        "dest": "/home.html"
+        "source": "/home",
+        "destination": "/home.html"
       },
       {
-        "src": "/(.*)",
-        "dest": "/$1.html"
-      }
+       "source": "/:path*",
+      "destination": "/:path*.html"
+    }
     ]
   }
