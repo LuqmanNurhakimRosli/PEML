@@ -136,4 +136,51 @@ transform: translateY(0); /* Move to its normal position */
   .leader-info p {
       font-size: 0.75rem; /* Smaller font size for mobile */
   }
+  /* ...existing code... */
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  #leadership {
+      padding: 20px 20px;
+      margin-left: 10px;
+  }
+
+  #leadership .container {
+      padding: 0 20px;
+  }
+
+  #leadership .container h2 {
+      font-size: 1.2em;
+  }
+
+  .leader-card {
+      padding: 8px;
+      margin-bottom: 15px;
+  }
+
+  .leader-info h4,
+  .leader-info h5 {
+      font-size: 0.75rem;
+      margin: 10px 0 3px;
+  }
+
+  .leader-info p {
+      font-size: 0.7rem;
+      margin: 10px 0 3px;
+  }
+
+  .leader-icons img {
+      width: 40px;
+      margin: 0 5px;
+  }
+
+  #names {
+      padding-top: 5px !important;
+  }
+
+  #director-name,
+  #director-name-anuar {
+      margin-top: 12px !important;
+  }
+}
 }
